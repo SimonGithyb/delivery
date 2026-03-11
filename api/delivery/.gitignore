@@ -3,8 +3,9 @@ target/
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-/.idea
+.idea
 ### STS ###
+ddl_ShipmentHistory.sql
 .apt_generated
 .classpath
 .factorypath
@@ -12,6 +13,7 @@ target/
 .settings
 .springBeans
 .sts4-cache
+.mvn
 
 ### IntelliJ IDEA ###
 .idea
