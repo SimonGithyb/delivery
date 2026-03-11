@@ -1,23 +1,12 @@
-version: '3.9'
+version: '3.8'
 
 services:
   postgres:
-    image: postgres:16
-    container_name: delivery-postgres
-    restart: always
+    image: postgres:15
+    container_name: courier-postgres
     environment:
-      POSTGRES_DB: delivery
+      POSTGRES_DB: courier_db
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
       - "5432:5432"
-    volumes:
-      - delivery_pg_data:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres -d delivery"]
-      interval: 5s
-      timeout: 5s
-      retries: 5
-
-volumes:
-  delivery_pg_data:
